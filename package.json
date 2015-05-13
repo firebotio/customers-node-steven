@@ -1,0 +1,53 @@
+{
+  "name": "firebot",
+  "description": "Firebot base Node app",
+  "engines": {
+    "node": "latest",
+    "npm": "latest"
+  },
+  "main": "app/main.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:firebotio/customers-node-base.git"
+  },
+  "version": "1.0.0",
+  "dependencies": {
+    "body-parser": "latest",
+    "express": "latest",
+    "flux": "latest",
+    "font-awesome": "latest",
+    "hbs": "latest",
+    "jquery": "latest",
+    "jquery-lazy": "latest",
+    "keymirror": "latest",
+    "morgan": "latest",
+    "mongoose": "latest",
+    "object-assign": "latest",
+    "react": "latest",
+    "react-router": "latest",
+    "react-tools": "latest"
+  },
+  "devDependencies": {
+    "browserify": "~6.2.0",
+    "envify": "~3.0.0",
+    "gulp": "^3.8.11",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-uglify": "^1.1.0",
+    "gulp-uglifycss": "latest",
+    "reactify": "^0.15",
+    "watchify": "~2.1.0"
+  },
+  "scripts": {
+    "start": "watchify -o public/js/development/bundle.js -v -d .",
+    "build": "browserify . | uglifyjs -cm > public/js/bundle.min.js",
+    "gulp": "gulp",
+    "watch": "sass --watch public/scss:public/css/development"
+  },
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  }
+}

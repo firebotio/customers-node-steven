@@ -1,0 +1,36 @@
+// Libraries
+// -----------------------------------------------------------------------------
+@import "../libs/bourbon/app/assets/stylesheets/bourbon";
+@import "../libs/neat/app/assets/stylesheets/neat";
+
+// // Variables
+// // -----------------------------------------------------------------------------
+// @import "variables/colors";
+// @import "variables/fonts";
+// @import "variables/spacing";
+// @import "variables/screen_sizes";
+// @import "variables/styles";
+
+// // Mixins
+// // -----------------------------------------------------------------------------
+// @import "mixins/general";
+// @import "mixins/media_queries";
+
+// // Additional styles below this line
+// //------------------------------------------------------------------------------
+
+// // Shared
+// // -----------------------------------------------------------------------------
+// @import "shared/hero/background";
+// @import "shared/forms/**/*";
+// @import "shared/main/main";
+
+// // Views
+// // -----------------------------------------------------------------------------
+
+// // Application
+// @import "views/application/**/*";
+
+// // Home
+// // Index
+// @import "views/home/index/**/*";

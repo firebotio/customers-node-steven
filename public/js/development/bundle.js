@@ -1,0 +1,1 @@
+console.error("Error: Cannot find module '/Users/tommydangerous/Dropbox/Node/projects/firebot/customers/base/watch' from '/Users/tommydangerous/Dropbox/Node/projects/firebot/customers/base'")

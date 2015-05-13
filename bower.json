@@ -1,0 +1,8 @@
+{
+  "name": "firebot",
+  "version": "0.0.0",
+  "dependencies": {
+    "bourbon": "latest",
+    "neat": "latest"
+  }
+}
