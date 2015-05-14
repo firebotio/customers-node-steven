@@ -1,6 +1,6 @@
 var Data = {
   layout: {
-    title: "Base"
+    page_title: "Base"
   }
 };
 

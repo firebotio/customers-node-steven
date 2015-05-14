@@ -18,3 +18,8 @@ Before deploying, compress assets.
 ```
 $ npm run gulp compress
 ```
+
+## Customization
+To change the default page title
+1. Open `app/Data.js`
+2. Edit the `layout` section and change the value for `page_title`
