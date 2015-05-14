@@ -4,4 +4,84 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: white;
+  font-weight: 300;
+  overflow-x: hidden; }
+  body .wrapper {
+    bottom: 100%;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    top: 0;
+    z-index: 0; }
+    body .wrapper .content {
+      color: #3c3c3c;
+      padding-bottom: 40px; }
+      body .wrapper .content a:hover {
+        text-decoration: underline; }
+
+a {
+  color: #0099e6;
+  text-decoration: none; }
+  a:hover {
+    color: #0085c8; }
+
+h1, h2, h3, h4 {
+  margin: 0; }
+
+h1 {
+  font-size: 41px;
+  line-height: 61.5px; }
+
+h2 {
+  font-size: 33px;
+  line-height: 49.5px; }
+
+h3 {
+  font-size: 27px;
+  line-height: 40.5px; }
+
+h4 {
+  font-size: 22px;
+  line-height: 33px; }
+
+p {
+  font-size: 15px;
+  line-height: 22.5px;
+  margin: 0; }
+
+ol, ul {
+  margin: 0;
+  padding-left: 25px; }
+
+.clear {
+  clear: both;
+  font-size: 1px;
+  height: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0; }
+
+footer {
+  background-color: white;
+  height: 40px;
+  margin-top: -40px;
+  position: relative;
+  width: 100%;
+  z-index: 1; }
+  footer .footer .footer__copyright {
+    text-align: center; }
+    footer .footer .footer__copyright p {
+      color: #3c3c3c;
+      font-size: 13px;
+      line-height: 40px; }
+
 /*# sourceMappingURL=application.css.map */

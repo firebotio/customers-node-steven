@@ -5,32 +5,19 @@
 
 // Variables
 // -----------------------------------------------------------------------------
-@import "variables/colors";
-@import "variables/fonts";
-@import "variables/screen_sizes";
-@import "variables/spacing";
-@import "variables/styles";
+@import "variables/variables";
 
 // Mixins
 // -----------------------------------------------------------------------------
-@import "mixins/general";
-@import "mixins/media_queries";
+@import "mixins/mixins";
 
-// // Additional styles below this line
-// //------------------------------------------------------------------------------
+// Shared
+// -----------------------------------------------------------------------------
+@import "shared/shared";
 
-// // Shared
-// // -----------------------------------------------------------------------------
-// @import "shared/hero/background";
-// @import "shared/forms/**/*";
-// @import "shared/main/main";
+// Views
+// -----------------------------------------------------------------------------
+@import "views/views";
 
-// // Views
-// // -----------------------------------------------------------------------------
-
-// // Application
-// @import "views/application/**/*";
-
-// // Home
-// // Index
-// @import "views/home/index/**/*";
+// Additional imports below this line
+//------------------------------------------------------------------------------

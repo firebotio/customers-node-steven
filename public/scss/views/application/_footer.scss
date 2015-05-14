@@ -1,0 +1,18 @@
+footer {
+  background-color: $white;
+  height: $footer-height;
+  margin-top: $footer-height * -1;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  .footer {
+    .footer__copyright {
+      text-align: center;
+      p {
+        color: $text-color;
+        font-size: $font-size-small-2;
+        line-height: $footer-height;
+      }
+    }
+  }
+}
