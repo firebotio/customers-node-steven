@@ -16,7 +16,6 @@
     "express": "latest",
     "express-handlebars": "latest",
     "flux": "latest",
-    "font-awesome": "latest",
     "jquery": "latest",
     "jquery-lazy": "latest",
     "keymirror": "latest",
