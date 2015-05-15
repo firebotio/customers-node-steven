@@ -262,7 +262,6 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("home/index/background-start.jpg");
     z-index: 0; }
   .home-index .start .tint {
     background-color: black;

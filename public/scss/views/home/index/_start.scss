@@ -7,7 +7,6 @@
   }
   .background {
     @include background-image-default;
-    background-image: url("home/index/background-start.jpg");
     z-index: 0;
   }
   .tint {
