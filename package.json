@@ -13,6 +13,7 @@
   "version": "1.0.0",
   "dependencies": {
     "body-parser": "latest",
+    "crypto-js": "latest",
     "express": "latest",
     "express-handlebars": "latest",
     "flux": "latest",
