@@ -19,6 +19,6 @@ var production = {
   apiVersion: 1,
   applicationKey: "",
   applicationId: ""
-}
+};
 
 module.exports = new FirebotClient(development);
