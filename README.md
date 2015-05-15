@@ -23,3 +23,11 @@ $ npm run gulp compress
 To change the default page title
 1. Open `app/Data.js`
 2. Edit the `layout` section and change the value for `page_title`
+
+## Environment Variables
+| Key  | Description | Example |
+| --- | --- | --- |
+| FIREBOT_API_URL | API URL | https://api.firebot.io |
+| FIREBOT_API_VERSION | API version | 1 |
+| FIREBOT_APPLICATION_KEY | Application key | xxz2-sdae-asdv-asfe |
+| FIREBOT_APPLICATION_ID | Application ID | 1234abcde5678fghi |
