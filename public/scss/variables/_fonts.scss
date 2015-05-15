@@ -16,3 +16,12 @@ $font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // Additional styles below this line
 //------------------------------------------------------------------------------
+
+@font-face {
+  font-family: "Didact Gothic";
+  src: url("../../fonts/didact-gothic/DidactGothic.ttf") format("truetype");
+}
+
+@mixin didact-gothic {
+  font-family: "Didact Gothic", $font-family;
+}

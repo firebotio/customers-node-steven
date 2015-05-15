@@ -1,0 +1,26 @@
+@import "features";
+@import "start";
+
+.home-index {
+  .hero__background__image {
+    background-image: url("../../img/home/index/background.jpg");
+  }
+  section {
+    .rows {
+      .row {
+        &.row-header {
+          text-align: center;
+          h2 {
+            font-weight: $font-weight-medium;
+          }
+          .underline {
+            border-bottom: 2px solid $blue;
+            margin: $spacing auto 0 auto;
+            max-width: $spacing * 15;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

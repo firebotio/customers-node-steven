@@ -79,3 +79,7 @@ ol, ul {
 
 // Additional styles below this line
 //------------------------------------------------------------------------------
+body {
+  @include didact-gothic;
+  -webkit-font-smoothing: antialiased;
+}

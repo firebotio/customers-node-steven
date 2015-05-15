@@ -4,6 +4,9 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+@font-face {
+  font-family: "Didact Gothic";
+  src: url("../../fonts/didact-gothic/DidactGothic.ttf") format("truetype"); }
 html, body {
   height: 100%;
   margin: 0;
@@ -70,6 +73,93 @@ ol, ul {
   margin: 0;
   padding: 0; }
 
+body {
+  font-family: "Didact Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+button {
+  font-family: "Didact Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+input {
+  font-family: "Didact Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.hero__background {
+  position: relative;
+  width: 100%; }
+  .hero__background .hero__background__tint, .hero__background .hero__background__image {
+    height: 100%;
+    position: absolute;
+    width: 100%; }
+  .hero__background .hero__background__tint {
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1; }
+  .hero__background .hero__background__image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0; }
+  .hero__background .hero__background__content {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2; }
+    .hero__background .hero__background__content:after {
+      clear: both;
+      content: " ";
+      display: table; }
+    @media screen and (min-width: 0px) and (max-width: 360px) {
+      .hero__background .hero__background__content {
+        padding: 100px 0; } }
+    @media screen and (min-width: 360px) and (max-width: 680px) {
+      .hero__background .hero__background__content {
+        padding: 100px 0; } }
+    @media screen and (min-width: 680px) {
+      .hero__background .hero__background__content {
+        padding: 200px 0; } }
+    .hero__background .hero__background__content .row {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      padding: 0 20px; }
+      .hero__background .hero__background__content .row:last-child {
+        margin-right: 0; }
+    .hero__background .hero__background__content .hero__background__content__image {
+      height: 100px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      width: 100px; }
+      .hero__background .hero__background__content .hero__background__content__image img {
+        height: 100%;
+        width: 100%; }
+    .hero__background .hero__background__content .hero__background__content__text {
+      margin: 0 auto;
+      max-width: 800px; }
+      .hero__background .hero__background__content .hero__background__content__text h1 {
+        color: white;
+        font-weight: 300;
+        margin-bottom: 60px;
+        text-align: center; }
+    .hero__background .hero__background__content .hero__background__content__actions a {
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      border-radius: 2px;
+      background-color: #0099e6;
+      color: white;
+      display: block;
+      font-size: 22px;
+      line-height: 20px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      width: 250px; }
+      .hero__background .hero__background__content .hero__background__content__actions a:hover {
+        background-color: #0085c8;
+        text-decoration: none; }
+
 footer {
   background-color: white;
   height: 40px;
@@ -83,5 +173,195 @@ footer {
       color: #3c3c3c;
       font-size: 13px;
       line-height: 40px; }
+
+.home-index .features {
+  background-color: whitesmoke; }
+  .home-index .features .rows {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px 20px; }
+    .home-index .features .rows:after {
+      clear: both;
+      content: " ";
+      display: table; }
+  .home-index .features .row {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto; }
+    .home-index .features .row:after {
+      clear: both;
+      content: " ";
+      display: table; }
+    .home-index .features .row .column {
+      margin-top: 40px; }
+      @media screen and (min-width: 0px) and (max-width: 360px) {
+        .home-index .features .row .column {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 100%; }
+          .home-index .features .row .column:last-child {
+            margin-right: 0; } }
+      @media screen and (min-width: 360px) and (max-width: 680px) {
+        .home-index .features .row .column {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 100%; }
+          .home-index .features .row .column:last-child {
+            margin-right: 0; } }
+      @media screen and (min-width: 680px) and (max-width: 1000px) {
+        .home-index .features .row .column {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 100%; }
+          .home-index .features .row .column:last-child {
+            margin-right: 0; } }
+      @media screen and (min-width: 1000px) {
+        .home-index .features .row .column {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 31.76157%; }
+          .home-index .features .row .column:last-child {
+            margin-right: 0; } }
+      .home-index .features .row .column.image {
+        margin-bottom: 20px;
+        margin-top: 60px;
+        text-align: center; }
+        @media screen and (min-width: 1000px) {
+          .home-index .features .row .column.image {
+            margin-bottom: 0 !important;
+            margin-top: 40px !important; } }
+      .home-index .features .row .column .feature {
+        margin-top: 40px;
+        text-align: center; }
+        .home-index .features .row .column .feature:first-child {
+          margin-top: 0; }
+          @media screen and (min-width: 1000px) {
+            .home-index .features .row .column .feature:first-child {
+              margin-top: 20px !important; } }
+        .home-index .features .row .column .feature i {
+          color: #0099e6;
+          font-size: 60px;
+          margin-bottom: 20px; }
+        .home-index .features .row .column .feature h4 {
+          font-weight: 400; }
+        .home-index .features .row .column .feature p {
+          color: #6e6e6e; }
+
+.home-index .start {
+  position: relative; }
+  .home-index .start .background, .home-index .start .tint {
+    height: 100%;
+    position: absolute;
+    width: 100%; }
+  .home-index .start .background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("home/index/background-start.jpg");
+    z-index: 0; }
+  .home-index .start .tint {
+    background-color: black;
+    opacity: 0.7;
+    z-index: 1; }
+  .home-index .start .rows {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px 0;
+    position: relative;
+    z-index: 2; }
+    .home-index .start .rows:after {
+      clear: both;
+      content: " ";
+      display: table; }
+  .home-index .start .row {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px; }
+    .home-index .start .row:after {
+      clear: both;
+      content: " ";
+      display: table; }
+    .home-index .start .row h2, .home-index .start .row p {
+      color: white; }
+    .home-index .start .row .column {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      text-align: center; }
+      .home-index .start .row .column:last-child {
+        margin-right: 0; }
+      .home-index .start .row .column fieldset {
+        border: none;
+        margin: 40px 0 0 0;
+        padding: 0; }
+        .home-index .start .row .column fieldset.show {
+          display: none; }
+        .home-index .start .row .column fieldset input {
+          -webkit-border-radius: 2px;
+          -moz-border-radius: 2px;
+          -ms-border-radius: 2px;
+          border-radius: 2px;
+          background-color: transparent;
+          border: 1px solid white;
+          color: white;
+          font-size: 18px;
+          padding: 20px;
+          width: 100%; }
+          @media screen and (max-width: 1000px) {
+            .home-index .start .row .column fieldset input {
+              margin-bottom: 5px;
+              text-align: center; } }
+          @media screen and (min-width: 1000px) {
+            .home-index .start .row .column fieldset input {
+              margin-right: 5px;
+              max-width: 400px; } }
+          .home-index .start .row .column fieldset input:focus {
+            outline: none; }
+          .home-index .start .row .column fieldset input::-webkit-input-placeholder {
+            color: rgba(255, 255, 255, 0.8); }
+          .home-index .start .row .column fieldset input::-moz-placeholder {
+            color: rgba(255, 255, 255, 0.8); }
+          .home-index .start .row .column fieldset input:-moz-placeholder {
+            color: rgba(255, 255, 255, 0.8); }
+          .home-index .start .row .column fieldset input:-ms-input-placeholder {
+            color: rgba(255, 255, 255, 0.8); }
+        .home-index .start .row .column fieldset button {
+          -webkit-border-radius: 2px;
+          -moz-border-radius: 2px;
+          -ms-border-radius: 2px;
+          border-radius: 2px;
+          background-color: #0099e6;
+          border: 1px solid #0099e6;
+          color: white;
+          font-size: 18px;
+          padding: 20px 40px; }
+          @media screen and (max-width: 1000px) {
+            .home-index .start .row .column fieldset button {
+              margin-top: 10px;
+              width: 100%; } }
+          .home-index .start .row .column fieldset button:hover {
+            background-color: #0085c8;
+            border-color: #0085c8;
+            cursor: pointer; }
+
+.home-index .hero__background__image {
+  background-image: url("../../img/home/index/background.jpg"); }
+.home-index section .rows .row.row-header {
+  text-align: center; }
+  .home-index section .rows .row.row-header h2 {
+    font-weight: 400; }
+  .home-index section .rows .row.row-header .underline {
+    border-bottom: 2px solid #0099e6;
+    margin: 20px auto 0 auto;
+    max-width: 300px;
+    width: 100%; }
 
 /*# sourceMappingURL=application.css.map */
