@@ -2,6 +2,8 @@ var React = require("react");
 
 var FirebotService = require("../../../../firebot/service");
 
+var SharedInputField = require("../../shared/SharedInputField.react");
+
 var HomeIndexStart = React.createClass({
   getInitialState: function() {
     return {
@@ -18,18 +20,13 @@ var HomeIndexStart = React.createClass({
         </fieldset>
         <fieldset className="hide" ref="inputFields">
           <form action="#" method="post" onSubmit={this._submit}>
-            <input autoComplete="off"
-                   onChange={this._onChange}
-                   name="name"
-                   placeholder="The name of your business"
-                   type="text"
-                   value={this.state.name} />
-            <input autoComplete="off"
-                   onChange={this._onChange}
-                   name="email"
-                   placeholder="Please enter your email address"
-                   type="email"
-                   value={this.state.email} />
+            <SharedInputField changeFunction={this._onChange}
+                              name="name"
+                              placeholder="The name of your business" />
+            <SharedInputField changeFunction={this._onChange}
+                              name="email"
+                              placeholder="Please enter your email address"
+                              type="email" />
             <button>Sign up</button>
           </form>
         </fieldset>
@@ -37,11 +34,7 @@ var HomeIndexStart = React.createClass({
     );
   },
 
-  _onChange: function(event) {
-    var value  = event.target.value;
-    var name   = $(event.target).attr("name");
-    var hash   = {}
-    hash[name] = value;
+  _onChange: function(hash) {
     this.setState(hash);
   },
 

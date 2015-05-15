@@ -15,6 +15,13 @@ $("img.lazy").Lazy();
 var HomeIndexStart = require(
   "./flux/components/home/index/HomeIndexStart.react"
 );
-React.render(
-  <HomeIndexStart />, document.getElementById("HomeIndexStart")
-);
+if (document.getElementById("HomeIndexStart")) {
+  React.render(
+    <HomeIndexStart />, document.getElementById("HomeIndexStart")
+  );
+}
+
+
+// Organizations
+// -----------------------------------------------------------------------------
+// New
