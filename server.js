@@ -9,9 +9,6 @@ var app     = express();
 // Logging
 var morgan = require("morgan");
 
-// Handlebars for templating
-var hbs = require("hbs");
-
 // Port
 var port = process.env.PORT || 8000;
 
