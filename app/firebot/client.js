@@ -17,8 +17,8 @@ var development = {
 var production = {
   apiUrl: "https://api.firebot.io",
   apiVersion: 1,
-  applicationKey: "",
-  applicationId: ""
-}
+  applicationKey: "2ce3bd2c-22eb-4f8d-83b0-06092e43303f",
+  applicationId: "a09b4bf6973141a58151a96d2a1b271b"
+};
 
 module.exports = new FirebotClient(development);

@@ -39,7 +39,7 @@ var HomeIndexStart = React.createClass({
   },
 
   _submit: function() {
-    var emailTo = process.env.HOME_EMAIL_TO || "tommydangerouss@gmail.com";
+    var emailTo = "tommydangerouss@gmail.com";
     var data = {
       from: emailTo,
       subject: "Business Sign Up",
