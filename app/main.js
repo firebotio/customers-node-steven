@@ -1,9 +1,10 @@
 var React = require("react");
 
 window.jQuery = require("jQuery");
-require("./jquery.lazy");
+window.$      = jQuery;
 
-jQuery("img.lazy").Lazy();
+require("./jquery.lazy");
+$("img.lazy").Lazy();
 
 // Additional JavaScript below this line
 // -----------------------------------------------------------------------------
