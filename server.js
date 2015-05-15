@@ -1,5 +1,13 @@
-// Environment
+// Environment variables
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
+
+process.env.FIREBOT_API_URL = process.env.FIREBOT_API_URL ||
+  "http://localhost:3001";
+process.env.FIREBOT_API_VERSION = process.env.FIREBOT_API_VERSION || "1";
+process.env.FIREBOT_APPLICATION_KEY = process.env.FIREBOT_APPLICATION_KEY ||
+  "d23de7a7-2fa4-4981-8a0f-878dc4a9a1a2";
+process.env.FIREBOT_APPLICATION_ID = process.env.FIREBOT_APPLICATION_ID ||
+  "05b030bb5fbf43ecb55744d9fa76e3aa";
 
 // App
 var express = require("express");
