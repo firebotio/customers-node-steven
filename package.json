@@ -14,9 +14,10 @@
   "dependencies": {
     "body-parser": "latest",
     "crypto-js": "latest",
+    "dotenv": "latest",
     "express": "latest",
-    "express-handlebars": "latest",
     "flux": "latest",
+    "jade": "latest",
     "jquery": "latest",
     "jquery-lazy": "latest",
     "keymirror": "latest",
