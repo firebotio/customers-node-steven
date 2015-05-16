@@ -11,25 +11,6 @@
     "url": "git@github.com:firebotio/customers-node-base.git"
   },
   "version": "1.0.0",
-  "dependencies": {
-    "body-parser": "latest",
-    "crypto-js": "latest",
-    "dotenv": "latest",
-    "express": "latest",
-    "flux": "latest",
-    "jade": "latest",
-    "jquery": "latest",
-    "jquery-lazy": "latest",
-    "keymirror": "latest",
-    "lodash": "latest",
-    "moment": "latest",
-    "mongoose": "latest",
-    "morgan": "latest",
-    "object-assign": "latest",
-    "react": "latest",
-    "react-router": "latest",
-    "react-tools": "latest"
-  },
   "devDependencies": {
     "browserify": "~6.2.0",
     "envify": "~3.0.0",
@@ -52,5 +33,27 @@
       "reactify",
       "envify"
     ]
+  },
+  "dependencies": {
+    "body-parser": "latest",
+    "crypto-js": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "express-session" :"latest",
+    "flux": "latest",
+    "jade": "latest",
+    "jquery": "latest",
+    "jquery-lazy": "latest",
+    "keymirror": "latest",
+    "lodash": "latest",
+    "moment": "latest",
+    "mongoose": "latest",
+    "morgan": "latest",
+    "object-assign": "latest",
+    "react": "latest",
+    "react-router": "latest",
+    "react-tools": "latest"
+    // Add additional dependencies below here
+    // -------------------------------------------------------------------------
   }
 }
