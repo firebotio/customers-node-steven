@@ -1,10 +1,8 @@
-var React = require("react");
+window._      = require("lodash");
+window.$      = require("jQuery");
+window.jQuery = $;
 
-window.jQuery = require("jQuery");
-window.$      = jQuery;
-
-require("../public/libs/jquery.lazyload/jquery.lazyload");
-$(".lazy").lazyload();
+require("./js/all");
 
 require("./js/js");
 

@@ -21,6 +21,7 @@
     "jquery": "latest",
     "jquery-lazy": "latest",
     "keymirror": "latest",
+    "lodash": "latest",
     "moment": "latest",
     "mongoose": "latest",
     "morgan": "latest",
