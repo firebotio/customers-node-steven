@@ -1965,6 +1965,43 @@ footer {
       font-size: 13px;
       line-height: 40px; }
 
+header {
+  background-color: white;
+  height: 60px; }
+  header .header__container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px; }
+    header .header__container:after {
+      clear: both;
+      content: " ";
+      display: table; }
+    header .header__container .column {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      header .header__container .column:last-child {
+        margin-right: 0; }
+      header .header__container .column .header__container__logo a {
+        display: block;
+        font-size: 27px;
+        font-weight: 400;
+        line-height: 60px; }
+      header .header__container .column .header__container__navigation {
+        float: right; }
+        header .header__container .column .header__container__navigation ul {
+          list-style: none;
+          margin: 0;
+          padding: 0; }
+          header .header__container .column .header__container__navigation ul li {
+            float: left; }
+            header .header__container .column .header__container__navigation ul li a {
+              display: block;
+              line-height: 60px;
+              padding: 0 20px; }
+
 .home-index .features {
   background-color: whitesmoke; }
   .home-index .features .rows {
