@@ -2,10 +2,13 @@ $header-height: $spacing * 3;
 
 header {
   background-color: $white;
+  border-bottom: 2px solid $gray-light-3;
   height: $header-height;
+  width: 100%;
   .header__container {
     @include outer-container;
-    padding: 0 $spacing * 0.5;
+    padding-left: $spacing;
+    padding-right: $spacing * 0.5;
     .column {
       @include span-columns(6);
       .header__container__logo {
@@ -14,6 +17,9 @@ header {
           font-size: $font-size-medium-2;
           font-weight: $font-weight-medium;
           line-height: $header-height;
+          &:hover {
+            color: $blue;
+          }
         }
       }
       .header__container__navigation {
@@ -28,6 +34,10 @@ header {
               display: block;
               line-height: $header-height;
               padding: 0 $spacing;
+              &:hover {
+                color: $white;
+                background-color: $blue;
+              }
             }
           }
         }

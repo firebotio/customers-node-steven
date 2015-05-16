@@ -1967,12 +1967,15 @@ footer {
 
 header {
   background-color: white;
-  height: 60px; }
+  border-bottom: 2px solid gainsboro;
+  height: 60px;
+  width: 100%; }
   header .header__container {
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 10px; }
+    padding-left: 20px;
+    padding-right: 10px; }
     header .header__container:after {
       clear: both;
       content: " ";
@@ -1989,6 +1992,8 @@ header {
         font-size: 27px;
         font-weight: 400;
         line-height: 60px; }
+        header .header__container .column .header__container__logo a:hover {
+          color: #0099e6; }
       header .header__container .column .header__container__navigation {
         float: right; }
         header .header__container .column .header__container__navigation ul {
@@ -2001,6 +2006,9 @@ header {
               display: block;
               line-height: 60px;
               padding: 0 20px; }
+              header .header__container .column .header__container__navigation ul li a:hover {
+                color: white;
+                background-color: #0099e6; }
 
 .home-index .features {
   background-color: whitesmoke; }
@@ -2179,6 +2187,12 @@ header {
             border-color: #0085c8;
             cursor: pointer; }
 
+.home-index header {
+  display: none;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 10; }
 .home-index section .rows .row.row-header {
   text-align: center; }
   .home-index section .rows .row.row-header h2 {
