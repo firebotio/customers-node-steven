@@ -2,7 +2,7 @@ var React = require("react");
 
 var CryptoJS = require("crypto-js");
 
-var FirebotObject = require("../../../../firebot/object");
+var FirebotObject = require("../../../../libs/firebot/FirebotObject");
 
 var SharedInputField = require("../../shared/SharedInputField.react");
 
@@ -13,9 +13,7 @@ var Errors = React.createClass({
       var child = React.createElement("li", { key: key },
         key + " " + this.props.errors[key]
       );
-      elements.push(
-        child
-      );
+      elements.push(child);
     }
 
     return(

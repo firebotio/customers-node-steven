@@ -1,6 +1,6 @@
 var React = require("react");
 
-var FirebotService = require("../../../../firebot/service");
+var FirebotService = require("../../../../libs/firebot/FirebotService");
 
 var SharedInputField = require("../../shared/SharedInputField.react");
 
