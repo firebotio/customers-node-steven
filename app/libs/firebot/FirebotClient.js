@@ -12,7 +12,7 @@ var production = {
   applicationId: "a09b4bf6973141a58151a96d2a1b271b"
 };
 
-var options = development;
+var options = production;
 
 exports.apiUrl     = options["apiUrl"];
 exports.apiVersion = options["apiVersion"];
