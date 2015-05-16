@@ -6,6 +6,8 @@ window.$      = jQuery;
 require("../public/libs/jquery.lazyload/jquery.lazyload");
 $(".lazy").lazyload();
 
+require("./js/js");
+
 // Additional JavaScript below this line
 // -----------------------------------------------------------------------------
 
