@@ -1,1 +1,1 @@
-console.error("Error: Cannot find module './flux/components/sessions/all' from '/Users/tommydangerous/Dropbox/Node/projects/firebot/customers/steven/app'")
+console.error("Error: Cannot find module './js/js' from '/Users/tommydangerous/Dropbox/Node/projects/firebot/customers/steven/app'")
