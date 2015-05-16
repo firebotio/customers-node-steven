@@ -1,24 +1,20 @@
 var FirebotClient = require("./FirebotClient");
 
-var FirebotService = function() {
-  endpoint = function(resource) {
-    return FirebotClient.apiUrl + "/" +
-           FirebotClient.apiVersion + "/services/" + resource;
-  };
-
-  this.email = function(data, callback) {
-    $.ajax({
-      data: data,
-      headers: FirebotClient.headers,
-      method: "post",
-      url: endpoint("email"),
-      success: function(response) {
-        if (callback) {
-          callback(response);
-        }
-      }
-    });
-  };
+var endpoint = function(resource) {
+  return FirebotClient.apiUrl + "/" +
+         FirebotClient.apiVersion + "/services/" + resource;
 };
 
-module.exports = new FirebotService();
+exports.email = function(data, callback) {
+  $.ajax({
+    data: data,
+    headers: FirebotClient.headers,
+    method: "post",
+    url: endpoint("email"),
+    success: function(response) {
+      if (callback) {
+        callback(response);
+      }
+    }
+  });
+};

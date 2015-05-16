@@ -1,12 +1,3 @@
-var FirebotClient = function(options) {
-  this.apiUrl     = options["apiUrl"];
-  this.apiVersion = options["apiVersion"];
-  this.headers = {
-    "X-Firebot-Application-Key": options["applicationKey"],
-    "X-Firebot-Application-Id":  options["applicationId"]
-  };
-};
-
 var development = {
   apiUrl: "http://localhost:3001",
   apiVersion: 1,
@@ -21,4 +12,11 @@ var production = {
   applicationId: ""
 };
 
-module.exports = new FirebotClient(development);
+var options = development;
+
+exports.apiUrl     = options["apiUrl"];
+exports.apiVersion = options["apiVersion"];
+exports.headers = {
+  "X-Firebot-Application-Key": options["applicationKey"],
+  "X-Firebot-Application-Id":  options["applicationId"]
+};
