@@ -3,8 +3,8 @@ var React = require("react");
 window.jQuery = require("jQuery");
 window.$      = jQuery;
 
-require("./jquery.lazy");
-$("img.lazy").Lazy();
+require("../public/libs/jquery.lazyload/jquery.lazyload");
+$(".lazy").lazyload();
 
 // Additional JavaScript below this line
 // -----------------------------------------------------------------------------

@@ -6,3 +6,4 @@ node_modules/
 
 public/libs/*
 !public/libs/font-awesome/
+!public/libs/jquery.lazyload/
