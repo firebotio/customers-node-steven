@@ -12,5 +12,7 @@ module.exports = function(app) {
   app.route("/sign-up").get(organizationsController.new);
 
   // Sessions
-  app.route("/login").get(sessionsController.new);
+  app.route("/login")
+    .get(sessionsController.new)
+    .post(sessionsController.create);
 };

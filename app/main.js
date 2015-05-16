@@ -4,8 +4,6 @@ window.jQuery = $;
 
 require("./js/all");
 
-require("./js/js");
-
 // Additional JavaScript below this line
 // -----------------------------------------------------------------------------
 

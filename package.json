@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "body-parser": "latest",
+    "cookie-session": "latest",
     "crypto-js": "latest",
     "dotenv": "latest",
     "express": "latest",
@@ -53,7 +54,5 @@
     "react": "latest",
     "react-router": "latest",
     "react-tools": "latest"
-    // Add additional dependencies below here
-    // -------------------------------------------------------------------------
   }
 }

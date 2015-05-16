@@ -25,6 +25,7 @@ var SessionNewForm = React.createClass({
                             name="password"
                             placeholder="Password"
                             type="password" />
+          <button>Login</button>
         </form>
       </div>
     );
@@ -40,15 +41,24 @@ var SessionNewForm = React.createClass({
   _onSubmit: function() {
     var _this = this;
 
-    // FirebotObject.create("Organization", this.state, function(response) {
-    //   _this.setState({ errors: response["errors"] });
-    //   if (response["errors"] == null) {
-    //     _this.setState({
-    //       flash: "Success!",
-    //       timestamp: new Date()
-    //     });
-    //   }
-    // });
+    // Fetch organization by email
+    // Compare passwords
+    // Create access token
+    // Store access token's token in the browser
+
+    console.log(_this.state);
+    $.ajax({
+      data: {
+        email: _this.state.email,
+        password: _this.state.password
+      },
+      method: "post",
+      url: "/login",
+      success: function(response) {
+        console.log(response);
+      }
+    });
+
     event.preventDefault();
   }
 });
