@@ -1,9 +1,9 @@
-var client = require("./client");
+var FirebotClient = require("./FirebotClient");
 
 var FirebotObject = function() {
   endpoint = function(className, objectId) {
-    var baseUrl = client.apiUrl + "/" +
-                  client.apiVersion + "/objects/" + className;
+    var baseUrl = FirebotClient.apiUrl + "/" +
+                  FirebotClient.apiVersion + "/objects/" + className;
     if (objectId) {
       baseUrl += "/" + objectId;
     }
@@ -13,7 +13,7 @@ var FirebotObject = function() {
   this.create = function(className, data, callback) {
     $.ajax({
       data: data,
-      headers: client.headers,
+      headers: FirebotClient.headers,
       method: "post",
       url: endpoint(className),
       success: function(response) {
