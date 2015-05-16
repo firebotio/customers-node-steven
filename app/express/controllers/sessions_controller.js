@@ -1,8 +1,7 @@
 exports.create = function(req, res) {
-  console.log(req.body);
+  req.session.token = req.body.password;
   res.json({
-    token: req.body,
-    text: "yo"
+    password: req.session.token
   });
 };
 
