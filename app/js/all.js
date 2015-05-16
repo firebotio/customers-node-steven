@@ -1,8 +1,6 @@
-window._      = require("lodash");
-window.$      = require("jQuery");
-window.jQuery = $;
-
-require("./js/all");
+// Lazy loading images
+require("../../public/libs/jquery.lazyload/jquery.lazyload");
+$(".lazy").lazyload();
 
 // Additional JavaScript below this line
 // -----------------------------------------------------------------------------
