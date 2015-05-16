@@ -24,6 +24,15 @@ app.use(express.static(__dirname + "/public"));
 // Logging
 app.use(morgan("combined"));
 
+// Session store
+var session = require("cookie-session");
+app.use(session({ secret: process.env.SECRET || "SECRET" }));
+
+// Parse incoming JSON
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 // Router
 require("./app/express/routers/router")(app);
 
