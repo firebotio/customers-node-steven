@@ -12,26 +12,10 @@ require("./js/js");
 // -----------------------------------------------------------------------------
 
 // Home
-// -----------------------------------------------------------------------------
-// Index
-var HomeIndexStart = require(
-  "./flux/components/home/index/HomeIndexStart.react"
-);
-if (document.getElementById("HomeIndexStart")) {
-  React.render(
-    <HomeIndexStart />, document.getElementById("HomeIndexStart")
-  );
-}
-
+require("./flux/components/home/all");
 
 // Organizations
-// -----------------------------------------------------------------------------
-// New
-var OrganizationNewForm = require(
-  "./flux/components/organizations/new/OrganizationNewForm.react"
-);
-if (document.getElementById("OrganizationNewForm")) {
-  React.render(
-    <OrganizationNewForm />, document.getElementById("OrganizationNewForm")
-  );
-}
+require("./flux/components/organizations/all");
+
+// Sessions
+require("./flux/components/sessions/all");
