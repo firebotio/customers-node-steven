@@ -25,3 +25,11 @@ if (document.getElementById("HomeIndexStart")) {
 // Organizations
 // -----------------------------------------------------------------------------
 // New
+var OrganizationNewForm = require(
+  "./flux/components/organizations/new/OrganizationNewForm.react"
+);
+if (document.getElementById("OrganizationNewForm")) {
+  React.render(
+    <OrganizationNewForm />, document.getElementById("OrganizationNewForm")
+  );
+}

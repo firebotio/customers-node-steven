@@ -2,6 +2,8 @@ var React = require("react");
 
 var CryptoJS = require("crypto-js");
 
+var FirebotObject = require("../../../../firebot/object");
+
 var SharedInputField = require("../../shared/SharedInputField.react");
 
 var Errors = React.createClass({
@@ -76,10 +78,9 @@ var OrganizationNewForm = React.createClass({
   },
 
   _onSubmit: function() {
-    var obj   = new FirebotObject("Organization");
     var _this = this;
 
-    obj.create(this.state, function(response) {
+    FirebotObject.create("Organization", this.state, function(response) {
       _this.setState({ errors: response["errors"] });
       if (response["errors"] == null) {
         _this.setState({
