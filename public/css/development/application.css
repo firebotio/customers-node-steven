@@ -2142,8 +2142,6 @@ footer {
             border-color: #0085c8;
             cursor: pointer; }
 
-.home-index .hero__background__image {
-  background-image: url("../../img/home/index/background.jpg"); }
 .home-index section .rows .row.row-header {
   text-align: center; }
   .home-index section .rows .row.row-header h2 {

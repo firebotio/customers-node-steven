@@ -4,6 +4,7 @@
   "dependencies": {
     "bourbon": "latest",
     "font-awesome": "latest",
+    "jquery.lazyload": "latest",
     "neat": "latest"
   }
 }
