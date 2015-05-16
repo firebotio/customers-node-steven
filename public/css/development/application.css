@@ -13,13 +13,8 @@ html {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-<<<<<<< HEAD
   src: url("../../libs/font-awesome/fonts/fontawesome-webfont.eot?v=4.3.0");
   src: url("../../libs/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("../../libs/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("../../libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("../../libs/font-awesome/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("../../libs/font-awesome/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
-=======
-  src: url("libs/font-awesome/fonts/fontawesome-webfont.eot?v=4.3.0");
-  src: url("libs/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("libs/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("libs/font-awesome/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("libs/font-awesome/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
->>>>>>> 7338cad87c48cf4140cb476b03654915300b24ac
   font-weight: normal;
   font-style: normal; }
 .fa {
@@ -1800,12 +1795,9 @@ html {
 .fa-medium:before {
   content: ""; }
 
-<<<<<<< HEAD
 @font-face {
   font-family: "Didact Gothic";
   src: url("../../fonts/didact-gothic/DidactGothic.ttf") format("truetype"); }
-=======
->>>>>>> 7338cad87c48cf4140cb476b03654915300b24ac
 html, body {
   height: 100%;
   margin: 0;
