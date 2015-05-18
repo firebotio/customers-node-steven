@@ -1,0 +1,25 @@
+.sessions-new {
+  .form {
+    margin: 0 auto;
+    max-width: $spacing * 25;
+    padding: $spacing;
+    width: 100%;
+    h4 {
+      margin-bottom: $spacing * 2;
+      text-align: center;
+    }
+    .fields {
+      .field {
+        margin-bottom: $spacing;
+        input {
+          width: 100%;
+        }
+      }
+    }
+    .actions {
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

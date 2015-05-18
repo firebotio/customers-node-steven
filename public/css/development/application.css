@@ -1869,10 +1869,58 @@ body {
   -webkit-font-smoothing: antialiased; }
 
 button {
-  font-family: "Didact Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-family: "Didact Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-transition: 0.1s all linear;
+  -moz-transition: 0.1s all linear;
+  -ms-transition: 0.1s all linear;
+  transition: 0.1s all linear;
+  background-color: #0099e6;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 20px; }
+  button:active, button:focus {
+    outline: none; }
+  button:active {
+    border-color: #0085c8; }
+  button:hover {
+    background-color: #0085c8;
+    color: white;
+    cursor: pointer;
+    text-decoration: none !important; }
 
 input {
-  font-family: "Didact Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-family: "Didact Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-transition: 0.1s all linear;
+  -moz-transition: 0.1s all linear;
+  -ms-transition: 0.1s all linear;
+  transition: 0.1s all linear;
+  border-color: gainsboro;
+  border-style: solid;
+  border-width: 1px;
+  color: #282828;
+  font-size: 15px;
+  outline: none;
+  padding: 10px; }
+  input:focus {
+    border-color: #0099e6; }
 
 .hero__background {
   position: relative;
@@ -2201,6 +2249,21 @@ header {
     border-bottom: 2px solid #0099e6;
     margin: 20px auto 0 auto;
     max-width: 300px;
+    width: 100%; }
+
+.sessions-new .form {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 20px;
+  width: 100%; }
+  .sessions-new .form h4 {
+    margin-bottom: 40px;
+    text-align: center; }
+  .sessions-new .form .fields .field {
+    margin-bottom: 20px; }
+    .sessions-new .form .fields .field input {
+      width: 100%; }
+  .sessions-new .form .actions button {
     width: 100%; }
 
 /*# sourceMappingURL=application.css.map */

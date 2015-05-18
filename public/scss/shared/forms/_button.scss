@@ -1,3 +1,24 @@
 button {
+  @include border-radius;
+  @include browser(appearance, none);
   @include didact-gothic;
+  @include transition;
+  background-color: $blue;
+  border: none;
+  color: $white;
+  font-size: $font-size-normal-1;
+  font-weight: $font-weight-bold;
+  padding: $spacing * 0.5 $spacing;
+  &:active, &:focus {
+    outline: none;
+  }
+  &:active {
+    border-color: $blue-hover;
+  }
+  &:hover {
+    background-color: $blue-hover;
+    color: $white;
+    cursor: pointer;
+    text-decoration: none !important;
+  }
 }

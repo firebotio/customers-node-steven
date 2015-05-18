@@ -16,17 +16,28 @@ var SessionNewForm = React.createClass({
   render: function() {
     return(
       <div key={this.state.timestamp}>
-        <form action="#" method="#" onSubmit={this._onSubmit}>
-          <SharedInputField changeFunction={this._onChange}
-                            name="email"
-                            placeholder="Email"
-                            type="email" />
-          <SharedInputField changeFunction={this._onChange}
-                            name="password"
-                            placeholder="Password"
-                            type="password" />
-          <button>Login</button>
-        </form>
+        <div className="form">
+          <h4>Tabbs Login</h4>
+          <form action="#" method="#" onSubmit={this._onSubmit}>
+            <div className="fields">
+              <div className="field">
+                <SharedInputField changeFunction={this._onChange}
+                                  name="email"
+                                  placeholder="Email"
+                                  type="email" />
+              </div>
+              <div className="field">
+                <SharedInputField changeFunction={this._onChange}
+                                  name="password"
+                                  placeholder="Password"
+                                  type="password" />
+              </div>
+            </div>
+            <div className="actions">
+              <button>Login</button>
+            </div>
+          </form>
+        </div>
       </div>
     );
   },
@@ -40,6 +51,8 @@ var SessionNewForm = React.createClass({
 
   _onSubmit: function() {
     var _this = this;
+
+    console.log(_this.state);
 
     // setCookie("session", _this.state.email, 30);
 
