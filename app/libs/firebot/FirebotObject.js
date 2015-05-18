@@ -9,6 +9,12 @@ var endpoint = function(className, objectId) {
   return baseUrl;
 };
 
+// Create
+// Destroy
+// Index
+// Show
+// Update
+
 exports.create = function(className, data, callback) {
   $.ajax({
     data: data,
@@ -21,4 +27,18 @@ exports.create = function(className, data, callback) {
       }
     }
   })
+};
+
+exports.index = function(className, data, callback) {
+  $.ajax({
+    data: data,
+    headers: FirebotClient.headers,
+    method: "get",
+    url: endpoint(className),
+    success: function(response) {
+      if (callback) {
+        callback(response)
+      }
+    }
+  });
 };
