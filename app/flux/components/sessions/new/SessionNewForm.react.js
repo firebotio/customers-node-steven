@@ -22,7 +22,9 @@ var SessionNewForm = React.createClass({
       <div key={this.state.timestamp}>
         <div className="form">
           <h4>Tabbs Login</h4>
-          { this.state.error ? <p className="error">{this.state.error}</p> : null }
+          { this.state.error ?
+            <p className="error">{this.state.error}</p> : null
+          }
           <form action="#" method="#" onSubmit={this._onSubmit}>
             <div className="fields">
               <div className="field">
