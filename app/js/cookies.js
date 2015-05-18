@@ -1,8 +1,8 @@
-export.deleteCookie = function(name) {
+exports.deleteCookie = function(name) {
   document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
 };
 
-export.getCookie = function (cname) {
+exports.getCookie = function (cname) {
   var name = cname + "=";
   var ca = document.cookie.split(";");
   for(var i=0; i<ca.length; i++) {
@@ -13,7 +13,7 @@ export.getCookie = function (cname) {
   return "";
 };
 
-export.setCookie = function(cname, cvalue, exdays) {
+exports.setCookie = function(cname, cvalue, exdays) {
   var d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
   var expires = "expires="+d.toUTCString();
