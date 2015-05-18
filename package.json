@@ -50,6 +50,7 @@
     "moment": "latest",
     "mongoose": "latest",
     "morgan": "latest",
+    "node-uuid": "latest",
     "object-assign": "latest",
     "react": "latest",
     "react-router": "latest",
