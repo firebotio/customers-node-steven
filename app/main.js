@@ -7,6 +7,9 @@ require("./js/all");
 // Additional JavaScript below this line
 // -----------------------------------------------------------------------------
 
+// Application
+require("./flux/components/application/all");
+
 // Home
 require("./flux/components/home/all");
 
