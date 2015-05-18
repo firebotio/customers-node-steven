@@ -1,7 +1,7 @@
 var React    = require("react");
 var CryptoJS = require("crypto-js");
-var cookies  = require("../../../../js/cookies");
 var moment   = require("moment");
+var session  = require("../../../../js/session");
 var uuid     = require('node-uuid');
 
 var FirebotObject    = require("../../../../libs/firebot/FirebotObject");
@@ -55,21 +55,17 @@ var SessionNewForm = React.createClass({
   },
 
   _onSubmit: function() {
-    // Fetch organization by email
-    // Compare passwords
-    // Create access token
-    // Store access token's token in the browser
-
     var _this = this;
 
     if (this.state.email.length > 0 && this.state.password.length > 0) {
+      // 1. Fetch organization by email
       var organizationParams = { email: _this.state.email };
       FirebotObject.index("Organization", organizationParams, function(res) {
         var errorMessage = null;
         var organization = res.objects[0] || null;
+        // 2. Compare passwords
         if (organization && organization.password == _this.state.password) {
-          var days      = 365;
-          var expiresAt = moment().add(days, "days").format("YYYY-MM-DD");
+          var expiresAt = moment().add(365, "days").format("YYYY-MM-DD");
           var token     = uuid.v1();
 
           var hash = {
@@ -78,14 +74,13 @@ var SessionNewForm = React.createClass({
             token: token
           };
 
+          // 3. Create access token
           FirebotObject.create("Authentication", hash, function(response) {
-            cookies.setCookie("sessionId", organization.id, days);
-            cookies.setCookie("sessionToken", response.token, days);
+            // 4. Store access token's token in the browser
+            session.login(response.organization.object_id, response.token);
 
-            var sessionIdCookie = cookies.getCookie("sessionId");
-            var sessionTokenCookie = cookies.getCookie("sessionToken");
-
-            console.log(sessionIdCookie, sessionTokenCookie);
+            // 5. Redirect to root path
+            window.location = "/";
           });
         } else {
           errorMessage = "Invalid email and/or password";
@@ -95,14 +90,6 @@ var SessionNewForm = React.createClass({
     } else {
       _this.setState({ error: "Please enter an email and password" });
     }
-
-    // setCookie("session", _this.state.email, 30);
-
-    // deleteCookie("session");
-
-    // var cookie = getCookie("session");
-
-    // console.log(cookie);
 
     event.preventDefault();
   }
