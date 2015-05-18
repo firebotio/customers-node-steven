@@ -5,7 +5,12 @@
     padding: $spacing;
     width: 100%;
     h4 {
-      margin-bottom: $spacing * 2;
+      margin-bottom: $spacing * 1.5;
+      text-align: center;
+    }
+    .error {
+      color: $red;
+      margin-bottom: $spacing * 0.5;
       text-align: center;
     }
     .fields {

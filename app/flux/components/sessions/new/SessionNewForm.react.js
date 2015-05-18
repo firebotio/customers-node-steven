@@ -9,6 +9,9 @@ var SharedInputField = require("../../shared/SharedInputField.react");
 var SessionNewForm = React.createClass({
   getInitialState: function() {
     return {
+      email: "",
+      error: null,
+      password: "",
       timestamp: new Date()
     }
   },
@@ -18,6 +21,7 @@ var SessionNewForm = React.createClass({
       <div key={this.state.timestamp}>
         <div className="form">
           <h4>Tabbs Login</h4>
+          { this.state.error ? <p className="error">{this.state.error}</p> : null }
           <form action="#" method="#" onSubmit={this._onSubmit}>
             <div className="fields">
               <div className="field">
@@ -50,9 +54,27 @@ var SessionNewForm = React.createClass({
   },
 
   _onSubmit: function() {
+    // Fetch organization by email
+    // Compare passwords
+    // Create access token
+    // Store access token's token in the browser
+
     var _this = this;
 
-    console.log(_this.state);
+    if (this.state.email.length > 0 && this.state.password.length > 0) {
+      var organization = null;
+      var organizationParams = { email: _this.state.email };
+      FirebotObject.index("Organization", organizationParams, function(res) {
+        organization = res.objects[0];
+        if (organization && organization.password == _this.state.password) {
+          _this.setState({ error: null });
+        } else {
+          _this.setState({ error: "Invalid email and/or password" });
+        }
+      });
+    } else {
+      _this.setState({ error: "Please enter an email and password" });
+    }
 
     // setCookie("session", _this.state.email, 30);
 
@@ -61,24 +83,6 @@ var SessionNewForm = React.createClass({
     // var cookie = getCookie("session");
 
     // console.log(cookie);
-
-    // Fetch organization by email
-    // Compare passwords
-    // Create access token
-    // Store access token's token in the browser
-
-    // console.log(_this.state);
-    // $.ajax({
-    //   data: {
-    //     email: _this.state.email,
-    //     password: _this.state.password
-    //   },
-    //   method: "post",
-    //   url: "/login",
-    //   success: function(response) {
-    //     console.log(response);
-    //   }
-    // });
 
     event.preventDefault();
   }
