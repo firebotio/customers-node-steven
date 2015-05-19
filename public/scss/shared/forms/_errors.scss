@@ -1,0 +1,9 @@
+.form {
+  .errors-list {
+    list-style-type: circle;
+    margin-bottom: $spacing;
+    li {
+      color: $red;
+    }
+  }
+}

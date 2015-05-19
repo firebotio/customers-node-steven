@@ -1898,6 +1898,31 @@ button {
     cursor: pointer;
     text-decoration: none !important; }
 
+.form--center {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 20px;
+  width: 100%; }
+  .form--center h4 {
+    margin-bottom: 30px;
+    text-align: center; }
+  .form--center .error {
+    color: #ff0007;
+    margin-bottom: 10px;
+    text-align: center; }
+  .form--center .fields .field {
+    margin-bottom: 20px; }
+    .form--center .fields .field input {
+      width: 100%; }
+  .form--center .actions button {
+    width: 100%; }
+
+.form .errors-list {
+  list-style-type: circle;
+  margin-bottom: 20px; }
+  .form .errors-list li {
+    color: #ff0007; }
+
 input {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -2249,25 +2274,6 @@ header {
     border-bottom: 2px solid #0099e6;
     margin: 20px auto 0 auto;
     max-width: 300px;
-    width: 100%; }
-
-.sessions-new .form {
-  margin: 0 auto;
-  max-width: 500px;
-  padding: 20px;
-  width: 100%; }
-  .sessions-new .form h4 {
-    margin-bottom: 30px;
-    text-align: center; }
-  .sessions-new .form .error {
-    color: #ff0007;
-    margin-bottom: 10px;
-    text-align: center; }
-  .sessions-new .form .fields .field {
-    margin-bottom: 20px; }
-    .sessions-new .form .fields .field input {
-      width: 100%; }
-  .sessions-new .form .actions button {
     width: 100%; }
 
 /*# sourceMappingURL=application.css.map */

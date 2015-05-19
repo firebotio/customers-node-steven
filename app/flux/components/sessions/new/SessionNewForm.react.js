@@ -1,8 +1,6 @@
 var React    = require("react");
 var CryptoJS = require("crypto-js");
-var moment   = require("moment");
 var session  = require("../../../../js/session");
-var uuid     = require('node-uuid');
 
 var FirebotObject    = require("../../../../libs/firebot/FirebotObject");
 var SharedInputField = require("../../shared/SharedInputField.react");
@@ -20,7 +18,7 @@ var SessionNewForm = React.createClass({
   render: function() {
     return(
       <div key={this.state.timestamp}>
-        <div className="form">
+        <div className="form form--center">
           <h4>Tabbs Login</h4>
           { this.state.error ?
             <p className="error">{this.state.error}</p> : null
@@ -67,21 +65,7 @@ var SessionNewForm = React.createClass({
         var organization = res.objects[0] || null;
         // 2. Compare passwords
         if (organization && organization.password == _this.state.password) {
-          var expiresAt = moment().add(365, "days").format("YYYY-MM-DD");
-          var token     = uuid.v1();
-
-          var hash = {
-            expires_at: expiresAt,
-            organization: organization.id,
-            token: token
-          };
-
-          // 3. Create access token
-          FirebotObject.create("Authentication", hash, function(response) {
-            // 4. Store access token's token in the browser
-            session.login(response.organization.object_id, response.token);
-
-            // 5. Redirect to root path
+          session.login(organization.id, function() {
             window.location = "/";
           });
         } else {

@@ -5,6 +5,7 @@ $(".lazy").lazyload();
 // Additional JavaScript below this line
 // -----------------------------------------------------------------------------
 require("./scroll_to");
+require("./strings");
 
 // Home
 require("./home/index/header");
