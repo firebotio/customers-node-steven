@@ -51,6 +51,7 @@ var SessionNewForm = React.createClass({
     if (hash["password"]) {
       hash["password"] = CryptoJS.SHA1(hash["password"]).toString();
     }
+    hash.error = null;
     this.setState(hash);
   },
 
@@ -58,14 +59,11 @@ var SessionNewForm = React.createClass({
     var _this = this;
 
     if (this.state.email.length > 0 && this.state.password.length > 0) {
-      // 1. Fetch organization by email
-      var organizationParams = { email: _this.state.email };
-      FirebotObject.index("Organization", organizationParams, function(res) {
+      FirebotObject.index("User", { email: _this.state.email }, function(res) {
         var errorMessage = null;
-        var organization = res.objects[0] || null;
-        // 2. Compare passwords
-        if (organization && organization.password == _this.state.password) {
-          session.login(organization.id, function() {
+        var user = res.objects[0] || null;
+        if (user && user.password == _this.state.password) {
+          session.login(user.id, function() {
             window.location = "/";
           });
         } else {
