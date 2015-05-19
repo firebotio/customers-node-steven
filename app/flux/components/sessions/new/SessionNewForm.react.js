@@ -1,9 +1,11 @@
-var React    = require("react");
-var CryptoJS = require("crypto-js");
-var session  = require("../../../../js/session");
+var React = require("react");
 
-var FirebotObject    = require("../../../../libs/firebot/FirebotObject");
+// React
 var SharedInputField = require("../../shared/SharedInputField.react");
+
+// Flux
+var SessionActions = require("../../../actions/SessionActions");
+var SessionStore   = require("../../../stores/SessionStore");
 
 var SessionNewForm = React.createClass({
   getInitialState: function() {
@@ -13,6 +15,14 @@ var SessionNewForm = React.createClass({
       password: "",
       timestamp: new Date()
     }
+  },
+
+  componentDidMount: function() {
+    SessionStore.addChangeListener(function() {});
+  },
+
+  componentWillUnmount: function() {
+    SessionStore.removeChangeListener(function() {});
   },
 
   render: function() {
@@ -48,9 +58,6 @@ var SessionNewForm = React.createClass({
   },
 
   _onChange: function(hash) {
-    if (hash["password"]) {
-      hash["password"] = CryptoJS.SHA1(hash["password"]).toString();
-    }
     hash.error = null;
     this.setState(hash);
   },
@@ -59,18 +66,12 @@ var SessionNewForm = React.createClass({
     var _this = this;
 
     if (this.state.email.length > 0 && this.state.password.length > 0) {
-      FirebotObject.index("User", { email: _this.state.email }, function(res) {
-        var errorMessage = null;
-        var user = res.objects[0] || null;
-        if (user && user.password == _this.state.password) {
-          session.login(user.id, function() {
-            window.location = "/";
-          });
-        } else {
-          errorMessage = "Invalid email and/or password";
-        }
-        _this.setState({ error: errorMessage });
-      });
+      SessionActions.login(_this.state.email, _this.state.password,
+        function() {
+          window.location = "/";
+        }, function(errorMessage) {
+          _this.setState({ error: errorMessage });
+        });
     } else {
       _this.setState({ error: "Please enter an email and password" });
     }
