@@ -1,6 +1,6 @@
 footer {
   background-color: $white;
-  height: $footer-height;
+  min-height: $footer-height;
   margin-top: $footer-height * -1;
   position: relative;
   width: 100%;
@@ -12,6 +12,31 @@ footer {
         color: $text-color;
         font-size: $font-size-small-2;
         line-height: $footer-height;
+      }
+    }
+  }
+}
+
+footer {
+  .footer {
+    .row {
+      @include outer-container;
+      .column {
+        @include screen-xs {
+          @include span-columns(12);
+          text-align: center;
+        }
+        @include screen-sm-min {
+          @include span-columns(6);
+          &.copyright {
+            text-align: right;
+          }
+        }
+        p {
+          color: $text-color;
+          font-size: $font-size-small-2;
+          line-height: $footer-height;
+        }
       }
     }
   }

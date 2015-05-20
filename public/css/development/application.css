@@ -2026,7 +2026,7 @@ input {
 
 footer {
   background-color: white;
-  height: 40px;
+  min-height: 40px;
   margin-top: -40px;
   position: relative;
   width: 100%;
@@ -2037,6 +2037,38 @@ footer {
       color: #3c3c3c;
       font-size: 13px;
       line-height: 40px; }
+
+footer .footer .row {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto; }
+  footer .footer .row:after {
+    clear: both;
+    content: " ";
+    display: table; }
+  @media screen and (min-width: 0px) and (max-width: 360px) {
+    footer .footer .row .column {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      text-align: center; }
+      footer .footer .row .column:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 360px) {
+    footer .footer .row .column {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      footer .footer .row .column:last-child {
+        margin-right: 0; }
+      footer .footer .row .column.copyright {
+        text-align: right; } }
+  footer .footer .row .column p {
+    color: #3c3c3c;
+    font-size: 13px;
+    line-height: 40px; }
 
 header {
   background-color: white;
