@@ -2260,12 +2260,35 @@ header {
             border-color: #0085c8;
             cursor: pointer; }
 
-.home-index header {
-  display: none;
-  left: 0;
-  position: fixed;
-  top: 0;
-  z-index: 10; }
+.home-index .hero .arrow {
+  display: block;
+  width: 100%; }
+  @media screen and (min-width: 0px) and (max-width: 360px) {
+    .home-index .hero .arrow {
+      margin-top: 80px; } }
+  @media screen and (min-width: 360px) and (max-width: 680px) {
+    .home-index .hero .arrow {
+      margin-top: 80px; } }
+  @media screen and (min-width: 680px) {
+    .home-index .hero .arrow {
+      margin-top: 160px; } }
+  .home-index .hero .arrow .icon {
+    text-align: center; }
+    .home-index .hero .arrow .icon i {
+      color: white;
+      font-size: 33px; }
+@media screen and (min-width: 0px) and (max-width: 360px) {
+  .home-index .hero__background__content {
+    padding-bottom: 20px;
+    padding-top: 100px; } }
+@media screen and (min-width: 360px) and (max-width: 680px) {
+  .home-index .hero__background__content {
+    padding-bottom: 20px;
+    padding-top: 100px; } }
+@media screen and (min-width: 680px) {
+  .home-index .hero__background__content {
+    padding-bottom: 40px;
+    padding-top: 200px; } }
 .home-index section .rows .row.row-header {
   text-align: center; }
   .home-index section .rows .row.row-header h2 {
