@@ -2,7 +2,8 @@
   background-color: rgb(245, 245, 245);
   .rows {
     @include outer-container;
-    padding: $spacing * 5 $spacing;
+    padding-left: $spacing;
+    padding-right: $spacing;
   }
   .row {
     @include outer-container;

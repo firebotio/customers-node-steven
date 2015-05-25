@@ -19,6 +19,7 @@ footer {
 
 footer {
   .footer {
+    padding: 0 $spacing;
     .row {
       @include outer-container;
       .column {

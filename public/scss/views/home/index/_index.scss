@@ -1,4 +1,5 @@
 @import "features";
+@import "how";
 @import "start";
 
 .home-index {
@@ -47,6 +48,8 @@
   }
   section {
     .rows {
+      padding-bottom: $spacing * 5;
+      padding-top: $spacing * 5;
       .row {
         &.row-header {
           text-align: center;

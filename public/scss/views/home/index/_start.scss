@@ -16,7 +16,6 @@
   }
   .rows {
     @include outer-container;
-    padding: $spacing * 5 0;
     position: relative;
     z-index: 2;
   }
